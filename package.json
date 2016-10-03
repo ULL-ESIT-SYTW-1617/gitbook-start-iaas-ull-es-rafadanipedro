@@ -1,0 +1,38 @@
+{
+  "name": "gitbook-boilerplate",
+  "version": "0.0.1",
+  "description": "Paquete de node para generar un gitbook",
+  "main": "index.js",
+  "scripts": {
+    "exec": "babel-node bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro.git"
+  },
+  "keywords": [
+    "paquete",
+    "node",
+    "gitbook"
+  ],
+  "author": "Rafa, Dani, Pedro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro#readme",
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "bin": "./bin/cli.js",
+  "devDependencies": {
+    "babel-polyfill": "6.16.0",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-stage-0": "6.16.0",
+    "babel-register": "6.16.0",
+    "fs-promise": "0.5.0",
+    "gulp": "3.9.1",
+    "gulp-clean": "0.3.2"
+  }
+}
