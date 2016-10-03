@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "exec": "babel-node bin/cli.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel -d dist/ src/"
   },
   "repository": {
     "type": "git",

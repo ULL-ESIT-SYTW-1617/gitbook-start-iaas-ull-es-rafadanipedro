@@ -1,5 +1,14 @@
 #!/usr/bin/env node
 
-import '../src'
+let production
+try {
+  production = !process.execArgv[0].match(/babel-cli/)
+} catch(err) {
+  production = true
+}
 
-console.log('Prueba')
+if (production) {
+  require('../dist')
+} else {
+  require('../src')
+}

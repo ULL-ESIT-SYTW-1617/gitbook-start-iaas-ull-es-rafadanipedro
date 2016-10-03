@@ -1,1 +1,1 @@
-console.log('Soy main!')
+console.log('Soy el fichero principal del paquete')
