@@ -26,7 +26,9 @@
   "standard": {
     "parser": "babel-eslint"
   },
-  "bin": "./bin/cli.js",
+  "bin": {
+    "gitbook-start": "./bin/cli.js"
+  },
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-polyfill": "6.16.0",
@@ -37,5 +39,8 @@
     "gulp": "3.9.1",
     "gulp-clean": "0.3.2",
     "markdown-live": "^1.0.8"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
   }
 }

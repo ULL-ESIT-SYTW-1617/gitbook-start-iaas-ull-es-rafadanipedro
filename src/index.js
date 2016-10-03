@@ -1,1 +1,5 @@
-console.log('Soy el fichero principal del paquete')
+import minimist from 'minimist'
+
+const argv = minimist(process.argv.slice(2))
+
+console.dir(argv);
