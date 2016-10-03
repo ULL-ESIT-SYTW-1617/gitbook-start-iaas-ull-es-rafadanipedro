@@ -44,6 +44,7 @@
     "markdown-live": "^1.0.8"
   },
   "dependencies": {
+    "ejs": "^2.5.2",
     "minimist": "^1.2.0"
   }
 }
