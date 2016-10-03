@@ -33,8 +33,7 @@ export default class Gitbook {
       await fs.mkdir(directory.replace(/template/, options.outputDirName))
     } catch (err) {
       if (err.message.match(/file already exists/)) {
-        //throw new Error(`El directorio ${err.message.match(/'(.+)'/)[1]} ya existe`)
-        console.log('pato')
+        throw new Error(`El directorio ${err.message.match(/'(.+)'/)[1]} ya existe`)
       } else {
         throw err
       }
