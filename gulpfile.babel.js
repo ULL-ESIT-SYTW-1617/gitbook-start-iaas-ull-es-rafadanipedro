@@ -1,5 +1,17 @@
-import { series, parallel, src } from 'gulp'
+import { src } from 'gulp'
+import standard from 'gulp-standard'
 
-const holaMundo = () => console.error('Hola Mundo')
+export function lint () {
+  src([
+    'src',
+    'bin/cli.js',
+    'gulpfile.babel.js'
+  ])
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      breakOnError: true,
+      quiet: true
+    }))
+}
 
-export default holaMundo
+export default lint

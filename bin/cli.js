@@ -3,7 +3,7 @@
 let production
 try {
   production = !process.execArgv[0].match(/babel-cli/)
-} catch(err) {
+} catch (err) {
   production = true
 }
 
