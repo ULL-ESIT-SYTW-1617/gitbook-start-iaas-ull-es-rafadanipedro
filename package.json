@@ -34,6 +34,7 @@
     "babel-register": "6.16.0",
     "fs-promise": "0.5.0",
     "gulp": "3.9.1",
-    "gulp-clean": "0.3.2"
+    "gulp-clean": "0.3.2",
+    "markdown-live": "^1.0.8"
   }
 }
