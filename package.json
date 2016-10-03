@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-boilerplate",
+  "name": "gitbook-start-rafadanipedro",
   "version": "0.0.1",
   "description": "Paquete de node para generar un gitbook",
   "main": "index.js",
@@ -27,6 +27,7 @@
     "parser": "babel-eslint"
   },
   "bin": "./bin/cli.js",
+  "man" : "./man/gitbook-start-rafadanipedro.1",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-polyfill": "6.16.0",
