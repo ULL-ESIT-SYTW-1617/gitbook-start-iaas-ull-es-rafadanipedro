@@ -29,6 +29,5 @@ if(process.argv.length == 2){
 }else{
   console.log("se pasa option creado");
   }
-options={...options,...argv};
 let gitbook = new Gitbook(options)
 gitbook.write().then(function(data){console.log(data)})
