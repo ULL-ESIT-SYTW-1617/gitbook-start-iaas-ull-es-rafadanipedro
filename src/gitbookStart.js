@@ -21,6 +21,7 @@ export default class Gitbook {
         throw err
       }
     }
+
     let files = await fs.readdir(origin)
     let promises = []
     for(let file of files) {
