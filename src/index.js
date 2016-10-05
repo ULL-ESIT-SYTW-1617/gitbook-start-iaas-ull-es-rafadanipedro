@@ -3,13 +3,7 @@ import Gitbook from './gitbookStart'
 import repoName from 'git-repo-name'
 const argv = minimist(process.argv.slice(2))
 const nombreRepo = repoName.sync();
-console.dir(argv);
-console.log(argv.author);
-console.log(argv.email);
-console.log(argv.license);
-console.log(argv.name);
-console.log(argv.title);
-console.log(argv.description);
+
 let author = argv.author || 'Pepe',
     email =  argv.email || 'pepe@pepe.com',
     license =  argv.license || 'MIT' ,
@@ -18,14 +12,7 @@ let author = argv.author || 'Pepe',
     name = argv.name || 'mi-libro-fantastico',
     title = argv.title || 'Título del Gitbook',
     description = argv.description ||  'Descripción breve del Gitbook';
-console.log(author);
-console.log(email);
-console.log(license);
-console.log(repo);
-console.log(ghPages);
-console.log(name);
-console.log(title);
-console.log(description);
+
 let options = {
   author: author,
   email: email,
