@@ -5,7 +5,7 @@ Durante la siguiente práctica trataremos de crear un paquete de NodeJS que nos 
 Además de esto, también publicaremos el paquete en la página de npm bajo el usuario [rafadanipedro](https://www.npmjs.com/~rafadanipedro).
 
 ## Enlace al paquete en npm
- * [Paquete publicado en npm]()
+ * [Paquete publicado en npm](https://www.npmjs.com/package/gitbook-start-rafadanipedro)
 
 ## Descripción de la práctica
  * [Gitbook de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html)
