@@ -17,7 +17,8 @@
     "node",
     "gitbook"
   ],
-  "author": "Rafa, Dani, Pedro",
+  "author": "rafadanipedro",
+  "contributors": ["Rafael Herrero", "Daniel Ramos", "Pedro Ramos"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro/issues"
