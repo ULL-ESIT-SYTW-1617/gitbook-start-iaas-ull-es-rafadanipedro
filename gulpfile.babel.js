@@ -3,7 +3,7 @@ import standard from 'gulp-standard'
 
 export function lint () {
   src([
-    'src',
+    'src/*',
     'bin/cli.js',
     'gulpfile.babel.js'
   ])

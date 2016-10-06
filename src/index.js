@@ -30,7 +30,7 @@ switch(true) {
   case argv.v:
     console.log("Version:", conf.version);
     break;
-    
+
   default:
     let author = argv.author || 'Pepe',
     email =  argv.email || 'pepe@pepe.com',
@@ -55,9 +55,8 @@ switch(true) {
 
     if(process.argv.length == 2)
       console.log("No recibi ningún argumento, se crea el options por defecto");
-    
-    let gitbook = new Gitbook(options)
-    gitbook.write().then(function(data){console.log(data)})
-}
-})()
 
+    let gitbook = new Gitbook(options)
+    await gitbook.write()
+}
+})().catch(err => console.error(`ERROR: ${err.message}`))
