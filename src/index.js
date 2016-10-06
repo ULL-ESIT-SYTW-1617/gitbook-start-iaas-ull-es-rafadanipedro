@@ -1,10 +1,34 @@
 import minimist from 'minimist'
+import fs from 'fs-promise'
 import Gitbook from './gitbookStart'
 import repoName from 'git-repo-name'
 const argv = minimist(process.argv.slice(2))
 const nombreRepo = repoName.sync();
+let conf = require('../package.json');
 
-let author = argv.author || 'Pepe',
+(async () => {
+const lectura_fichero = (ruta) => {
+  return fs.readFile(ruta, 'utf8');;
+};
+
+switch(true) {
+  case argv.h:
+    console.log(await lectura_fichero('./man/gitbook-start-rafadanipedro.1'));
+  break;
+
+  case argv.a:
+    console.log("Autor:", conf.author);
+    break;
+
+  case argv.c:
+    console.log("Contribuidores:");
+    for (let contributors of conf.contributors){
+      console.log("*", contributors);
+    }
+    break;
+
+  default:
+    let author = argv.author || 'Pepe',
     email =  argv.email || 'pepe@pepe.com',
     license =  argv.license || 'MIT' ,
     repo =  argv.repo || 'https://github.com/ULL-ESIT-SYTW-1617/'+nombreRepo,
@@ -13,21 +37,23 @@ let author = argv.author || 'Pepe',
     title = argv.title || 'Título del Gitbook',
     description = argv.description ||  'Descripción breve del Gitbook';
 
-let options = {
-  author: author,
-  email: email,
-  license: license,
-  repo: repo,
-  ghPages: ghPages,
-  name: name,
-  title: title,
-  description: description,
-  outputDirName: 'output'
+    let options = {
+      author: author,
+      email: email,
+      license: license,
+      repo: repo,
+      ghPages: ghPages,
+      name: name,
+      title: title,
+      description: description,
+      outputDirName: 'output'
+    }
+
+    if(process.argv.length == 2)
+      console.log("No recibi ningún argumento, se crea el options por defecto");
+    
+    let gitbook = new Gitbook(options)
+    gitbook.write().then(function(data){console.log(data)})
 }
-if(process.argv.length == 2){
-  console.log("no recibi ningún argumento, se crea el options por defecto");
-}else{
-  console.log("se pasa option creado");
-  }
-let gitbook = new Gitbook(options)
-gitbook.write().then(function(data){console.log(data)})
+})()
+
