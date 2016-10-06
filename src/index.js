@@ -27,6 +27,10 @@ switch(true) {
     }
     break;
 
+  case argv.v:
+    console.log("Version:", conf.version);
+    break;
+    
   default:
     let author = argv.author || 'Pepe',
     email =  argv.email || 'pepe@pepe.com',
