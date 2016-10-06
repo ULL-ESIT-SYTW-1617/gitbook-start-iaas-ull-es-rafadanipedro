@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-rafadanipedro",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Paquete de node para generar un gitbook",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,11 @@
     "gitbook"
   ],
   "author": "rafadanipedro",
-  "contributors": ["Rafael Herrero", "Daniel Ramos", "Pedro Ramos"],
+  "contributors": [
+    "Rafael Herrero",
+    "Daniel Ramos",
+    "Pedro Ramos"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro/issues"
