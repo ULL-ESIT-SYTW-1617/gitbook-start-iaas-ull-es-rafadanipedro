@@ -1,62 +1,60 @@
 import minimist from 'minimist'
 import fs from 'fs-promise'
 import Gitbook from './gitbookStart'
-import repoName from 'git-repo-name'
-const argv = minimist(process.argv.slice(2))
-const nombreRepo = repoName.sync();
-let conf = require('../package.json');
+import path from 'path'
+import nombre from 'git-user-name'
+import email from 'git-user-email'
+import GHUsername from './githubUsername'
 
 (async () => {
-const lectura_fichero = (ruta) => {
-  return fs.readFile(ruta, 'utf8');;
-};
+  const argv = minimist(process.argv.slice(2))
+  let conf = require('../package.json')
 
-switch(true) {
-  case argv.h:
-    console.log(await lectura_fichero('./man/gitbook-start-rafadanipedro.1'));
-  break;
+  const ghUsername = await GHUsername()
 
-  case argv.a:
-    console.log("Autor:", conf.author);
-    break;
+  switch(true) {
+    case argv.h:
+    case argv.help:
+      console.log(fs.readFileSync(path.resolve(__dirname, '..', 'man/gitbook-start-rafadanipedro.1'), 'utf8'))
+      break;
 
-  case argv.c:
-    console.log("Contribuidores:");
-    for (let contributors of conf.contributors){
-      console.log("*", contributors);
-    }
-    break;
+    case argv.a:
+      console.log(`Autor: ${conf.author}`);
+      break;
 
-  case argv.v:
-    console.log("Version:", conf.version);
-    break;
+    case argv.c:
+    case argv.contributors:
+      console.log("Contribuidores:");
+      for (let contributors of conf.contributors){
+        console.log(`* ${contributors}`);
+      }
+      break;
 
-  default:
-    let author = argv.author || 'Pepe',
-    email =  argv.email || 'pepe@pepe.com',
-    license =  argv.license || 'MIT' ,
-    repo =  argv.repo || 'https://github.com/ULL-ESIT-SYTW-1617/'+nombreRepo,
-    ghPages =  argv.ghpages || 'http://ULL-ESIT-SYTW-1617.github.io/'+nombreRepo,
-    name = argv.name || 'mi-libro-fantastico',
-    title = argv.title || 'Título del Gitbook',
-    description = argv.description ||  'Descripción breve del Gitbook';
+    case argv.v:
+    case argv.version:
+      console.log(`Version: ${conf.version}`);
+      break;
 
-    let options = {
-      author: author,
-      email: email,
-      license: license,
-      repo: repo,
-      ghPages: ghPages,
-      name: name,
-      title: title,
-      description: description,
-      outputDirName: 'output'
-    }
+    default:
+      if (argv._.length === 0) {
+        console.error('Tienes que pasarme el nombre del libro')
+        process.exit(1)
+      }
 
-    if(process.argv.length == 2)
-      console.log("No recibi ningún argumento, se crea el options por defecto");
-
-    let gitbook = new Gitbook(options)
-    await gitbook.write()
-}
-})().catch(err => console.error(`ERROR: ${err.message}`))
+      let nombreLibro = argv._[0]
+      let options = {
+        author: nombre(),
+        email: email(),
+        license: 'MIT',
+        repo: `http://${ghUsername}.github.com/${nombreLibro}`,
+        ghPages: `http://${ghUsername}.github.io/${nombreLibro}`,
+        name: nombreLibro,
+        title: nombreLibro,
+        description: 'Descripción breve del Gitbook',
+        outputDirName: nombreLibro,
+        ...argv
+      }
+      let gitbook = new Gitbook(options)
+      gitbook.write().catch(err => console.error(`ERROR: ${err.message}`))
+  }
+})()
