@@ -12,22 +12,22 @@ const lectura_fichero = (ruta) => {
 };
 
 switch(true) {
-  case argv.h:
+  case (argv.h || argv.help):
     console.log(await lectura_fichero('./man/gitbook-start-rafadanipedro.1'));
   break;
 
-  case argv.a:
+  case (argv.a || argv.authorinfo):
     console.log("Autor:", conf.author);
     break;
 
-  case argv.c:
+  case (argv.c || argv.contributors):
     console.log("Contribuidores:");
     for (let contributors of conf.contributors){
       console.log("*", contributors);
     }
     break;
 
-  case argv.v:
+  case (argv.v || argv.version):
     console.log("Version:", conf.version);
     break;
 
