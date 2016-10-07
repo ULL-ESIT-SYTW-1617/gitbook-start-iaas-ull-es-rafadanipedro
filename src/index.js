@@ -18,13 +18,13 @@ import GHUsername from './githubUsername'
       break;
 
     case (argv.a || argv.authorinfo):
-      console.log(`Autor: ${conf.author}`);
+      console.log(`Autor: ${conf.author.name}`);
       break;
 
     case (argv.c || argv.contributors):
       console.log("Contribuidores:");
-      for (let contributors of conf.contributors){
-        console.log(`* ${contributors}`);
+      for (let contributor of conf.contributors){
+        console.log(`* ${contributor.name}`);
       }
       break;
 

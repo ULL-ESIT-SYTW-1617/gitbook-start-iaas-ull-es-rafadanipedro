@@ -17,11 +17,19 @@
     "node",
     "gitbook"
   ],
-  "author": "rafadanipedro",
+  "author": {
+    "name": "rafadanipedro"
+  },
   "contributors": [
-    "Rafael Herrero",
-    "Daniel Ramos",
-    "Pedro Ramos"
+    {
+      "name": "Rafael Herrero"
+    },
+    {
+      "name": "Daniel Ramos"
+    },
+    {
+      "name": "Pedro Ramos"
+    }
   ],
   "license": "MIT",
   "bugs": {
