@@ -2,12 +2,21 @@ PAQUETE NPM PARA EL DESPLIEGUE DE UN GITBOOK
 
 Este paquete le permite automatizar tareas a la hora de crear y publicar libros en Gitbook.
 
+Argumentos de informacion:
+ * -a o --authorinfo: muestra la informacion del autor.
+ * -c o --contributors: muestra la informacion sobre los contribuidores. 
+ * -h o --help: muestra esta guia.
+ * -v o --version: muestra la version actual del paquete.
+
 Los argumentos que puede utilizar son:
  * --author: especifica el autor del libro. Por defecto es "Pepe".
  * --email: especififca el email del autor del libro. Por defecto es "pepe@pepe.com".
  * --license: especifica la licencia del libro. Por defecto es "MIT".
- * --repo: especifica la dirección del repositorio de GitHub. Por defecto es "https://github.com/ULL-ESIT-SYTW-1617/'+nombreRepo".
- * --ghPages: especifica la dirección en la que se encuentran las gh-pages generadas. Por defecto es "http://ULL-ESIT-SYTW-1617.github.io/'+nombreRepo".
+ * --repo: especifica la direccion del repositorio de GitHub. Por defecto es "https://github.com/ULL-ESIT-SYTW-1617/'+nombreRepo".
+ * --ghPages: especifica la direccion en la que se encuentran las gh-pages generadas. Por defecto es "http://ULL-ESIT-SYTW-1617.github.io/'+nombreRepo".
  * --name: especifica el nombre del libro. Por defecto es "mi-libro-fantastico".
- * --title: especifica el titulo del libro. Por defecto es "Título del Gitbook".
- * --description: especifica la descripcion del libro. Por defecto es "Descripción breve del Gitbook".
+ * --title: especifica el titulo del libro. Por defecto es "Titulo del Gitbook".
+ * --description: especifica la descripcion del libro. Por defecto es "Descripcion breve del Gitbook".
+ * --outputDirName: nombre del directorio a crear.
+
+Es obligatorio especificar un nombre para el libro, ya que es el unico argumento obligatorio.

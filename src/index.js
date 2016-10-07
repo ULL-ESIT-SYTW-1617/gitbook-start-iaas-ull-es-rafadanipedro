@@ -13,25 +13,22 @@ import GHUsername from './githubUsername'
   const ghUsername = await GHUsername()
 
   switch(true) {
-    case argv.h:
-    case argv.help:
+    case (argv.h || argv.help):
       console.log(fs.readFileSync(path.resolve(__dirname, '..', 'man/gitbook-start-rafadanipedro.1'), 'utf8'))
       break;
 
-    case argv.a:
+    case (argv.a || argv.authorinfo):
       console.log(`Autor: ${conf.author}`);
       break;
 
-    case argv.c:
-    case argv.contributors:
+    case (argv.c || argv.contributors):
       console.log("Contribuidores:");
       for (let contributors of conf.contributors){
         console.log(`* ${contributors}`);
       }
       break;
 
-    case argv.v:
-    case argv.version:
+    case (argv.v || argv.version):
       console.log(`Version: ${conf.version}`);
       break;
 
