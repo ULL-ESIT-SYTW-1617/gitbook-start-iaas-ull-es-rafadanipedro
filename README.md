@@ -4,6 +4,29 @@ Durante la siguiente práctica trataremos de crear un paquete de NodeJS que nos 
 
 Además de esto, también publicaremos el paquete en la página de npm bajo el usuario [rafadanipedro](https://www.npmjs.com/~rafadanipedro).
 
+## Instalación del paquete
+Para instalar el paquete debemos de ejecutar el siguiente comando:
+`npm --global install gitbook-start-rafadanipedro`
+
+También podemos instalarlo de manera local si queremos eliminando el argumento `--global`.
+
+## Uso del paquete
+Para utilizar el paquete solo tenemos que ejecutar el comando `gitbook-start` seguido de los siguientes argumentos:
+
+ `--author`: especifica el autor del libro. Por defecto es el nombre de usuario de GitHub.  
+ `--email`: especifica el email del autor del libro. Por defecto es el correo de usuario de git.  
+ `--license`: especifica la licencia del libro. Por defecto es "MIT".  
+ `--repo`: especifica la direccion del repositorio de GitHub. Por defecto es "https://github.com/'+nombreUsuario/'+nombreRepo".  
+ `--ghPages`: especifica la direccion en la que se encuentran las gh-pages generadas. Por defecto es "http://'+nombreUsuario.github.io/'+nombreRepo".  
+ `--name`: especifica el nombre del libro. Por defecto este argumento es obligatorio.  
+ `--title`: especifica el titulo del libro. Por defecto es el mismo que el nombre del libro.  
+`--description`: especifica la descripcion del libro. Por defecto es "Descripcion breve del Gitbook".  
+ `--outputDirName`: nombre del directorio a crear. Por defecto es el nombre del libro.
+
+Es obligatorio especificar un nombre para el libro, ya que es el unico argumento obligatorio.
+
+Ejemplo: `gitbook-start mi_libro --author Joselito --email joselito@chuchu.com`
+
 ## Enlace al paquete en npm
  * [Paquete publicado en npm](https://www.npmjs.com/package/gitbook-start-rafadanipedro)
 
