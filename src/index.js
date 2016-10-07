@@ -43,7 +43,7 @@ import GHUsername from './githubUsername'
         author: nombre(),
         email: email(),
         license: 'MIT',
-        repo: `http://${ghUsername}.github.com/${nombreLibro}`,
+        repo: `http://github.com/${ghUsername}/${nombreLibro}`,
         ghPages: `http://${ghUsername}.github.io/${nombreLibro}`,
         name: nombreLibro,
         title: nombreLibro,
