@@ -5,6 +5,7 @@ import path from 'path'
 import nombre from 'git-user-name'
 import email from 'git-user-email'
 import GHUsername from './githubUsername'
+import deploy from './deploy'
 
 (async () => {
   const argv = minimist(process.argv.slice(2))
@@ -12,11 +13,9 @@ import GHUsername from './githubUsername'
 
   const ghUsername = await GHUsername()
 
-  switch(true) {
-    case (argv.h || argv.help):
-      console.log(fs.readFileSync(path.resolve(__dirname, '..', 'man/gitbook-start-rafadanipedro.1'), 'utf8'))
-      break;
+  if (argv.d || argv.deploy) return deploy(argv.d || argv.deploy)
 
+  switch(true) {
     case (argv.a || argv.authorinfo):
       console.log(`Autor: ${conf.author.name}`);
       break;
@@ -26,6 +25,10 @@ import GHUsername from './githubUsername'
       for (let contributor of conf.contributors){
         console.log(`* ${contributor.name}`);
       }
+      break;
+
+    case (argv.h || argv.help):
+      console.log(fs.readFileSync(path.resolve(__dirname, '..', 'man/gitbook-start-rafadanipedro.1'), 'utf8'))
       break;
 
     case (argv.v || argv.version):
