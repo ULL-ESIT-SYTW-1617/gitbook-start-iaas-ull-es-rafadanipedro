@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-require('babel-polyfill')
-
 var production
 try {
   production = !process.execArgv[0].match(/babel-cli/)
@@ -10,6 +8,7 @@ try {
 }
 
 if (production) {
+  require('babel-polyfill')
   require('../dist')
 } else {
   require('../src')
