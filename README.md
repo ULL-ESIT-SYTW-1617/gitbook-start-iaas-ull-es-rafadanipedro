@@ -1,8 +1,8 @@
-# Creación de un paquete NPM. Práctica 2 de SYTW
+# Creación de un paquete NPM con despliegue en IAAS. Práctica 4 SYTW
 
-Durante la siguiente práctica trataremos de crear un paquete de NodeJS que nos permita automatizar las tareas de la anterior práctica, [tareas iniciales](https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-rafadanipedro), en la que teníamos que publicar un libro en Gitbook con los pasos a realizar en la práctica.
+Durante la siguiente práctica se tratará de extender el paquete publicado en la práctica 2 , [Creación de un Paquete NPM ](https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro), en la que se creaba un paquete para realizar la creación de un gitbook. En esta práctica,además, se ha añadido la posibilidad al usuario de desplegar el Gitbook creado en el servicio Iaas de la ULL mediante la utilización de un plugin.
 
-Además de esto, también publicaremos el paquete en la página de npm bajo el usuario [rafadanipedro](https://www.npmjs.com/~rafadanipedro).
+Además de esto, también publicaremos el paquete en la página de npm bajo el usuario [rafadanipedro](https://www.npmjs.com/package/gitbook-start-rafadanipedro).
 
 ## Instalación del paquete
 Para instalar el paquete debemos de ejecutar el siguiente comando:
@@ -27,8 +27,26 @@ Es obligatorio especificar un nombre para el libro, ya que es el unico argumento
 
 Ejemplo: `gitbook-start mi_libro --author Joselito --email joselito@chuchu.com`
 
+Enlace del plugin utilizado en la práctica:
+(https://www.npmjs.com/package/plugin-iaas-rafadanipedro)
+
+## Instalación del plugin
+Para instalar el plugin debemos de ejecutar el siguiente comando:
+`npm --global install plugin-iaas-rafadanipedro`
+
+## Uso del plugin
+
+Para utilizar la función deploy del plugin, se debe realizar de la siguiente manera:
+
+Ejemplo: `gitbook-start --deploy plugin-iaas-rafadanipedro`
+
+
+
 ## Enlace al paquete en npm
  * [Paquete publicado en npm](https://www.npmjs.com/package/gitbook-start-rafadanipedro)
+
+##Enlace al plugin en npm 
+  * [Paquete del plugin](https://www.npmjs.com/package/plugin-iaas-rafadanipedro)
 
 ## Descripción de la práctica
  * [Gitbook de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html)
