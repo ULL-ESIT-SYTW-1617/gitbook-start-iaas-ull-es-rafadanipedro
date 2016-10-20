@@ -13,7 +13,7 @@ import deploy from './deploy'
 
   const ghUsername = await GHUsername()
 
-  if (argv.d || argv.deploy) return deploy(argv.d || argv.deploy)
+  if (argv.d || argv.deploy) return deploy(argv.d || argv.deploy, argv)
 
   switch(true) {
     case (argv.a || argv.authorinfo):
@@ -26,7 +26,6 @@ import deploy from './deploy'
         console.log(`* ${contributor.name}`);
       }
       break;
-
     case (argv.h || argv.help):
       console.log(fs.readFileSync(path.resolve(__dirname, '..', 'man/gitbook-start-rafadanipedro.1'), 'utf8'))
       break;

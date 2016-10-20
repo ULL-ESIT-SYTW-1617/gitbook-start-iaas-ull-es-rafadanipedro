@@ -1,6 +1,6 @@
 import { series, parallel, src } from 'gulp'
 import gclean from 'gulp-clean'
-
+import plugins from './plugins.json'
 
 export {default as contributors} from './scripts/contributors'
 import generateGhPages from './scripts/generate-gh-pages'
