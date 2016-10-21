@@ -48,7 +48,7 @@ Ejemplo: `gitbook-start --deploy plugin-iaas-rafadanipedro`
 
 Un plugin necesita exportar 2 funciones fundamentales:
 
-* `config()`: Función que expota un objecto con la configuración por defecto del plugin.
+* `config()`: Función que exporta un objeto con la configuración por defecto del plugin.
 * `deploy(oppciones)`: Función que realiza el deploy usando la configuración que se le pasa por argumentos. Devuelve una promesa que se resuelve cuando todo está desplegado.
 
 ## Enlace al paquete en npm
@@ -61,11 +61,11 @@ Un plugin necesita exportar 2 funciones fundamentales:
  * [Gitbook de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html)
 
 ## Comandos para trabajar con el comando al descargar el repositorio
-`babel-node <ruta del proyecto en el que trabaja> Pruebecia`
+* `babel-node <ruta del proyecto en el que trabaja> Pruebecia`
 
-`babel-node <ruta del proyecto en el que trabaja> plugin-iaas-rafadanipedro --author=prueba --host=xxx.xxxx.xxxx.xxx`
+* `babel-node <ruta del proyecto en el que trabaja> plugin-iaas-rafadanipedro --author=prueba --host=xxx.xxxx.xxxx.xxx`
 
-`gulp -T`
+* `gulp -T`
 
 `gulp iaasRafadanipedro`
 
