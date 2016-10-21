@@ -34,13 +34,22 @@ Enlace del plugin utilizado en la práctica:
 Para instalar el plugin debemos de ejecutar el siguiente comando:
 `npm --global install plugin-iaas-rafadanipedro`
 
-## Uso del plugin
+## Cómo desplegar un plugin
 
 Para utilizar la función deploy del plugin, se debe realizar de la siguiente manera:
 
+`gitbook-start --deploy <nombre plugin> [options]`
+
+De este modo añadiremos el plugin al gulpfile y su configuración quedará almacenada en el fichero `plugins.json`.
+
 Ejemplo: `gitbook-start --deploy plugin-iaas-rafadanipedro`
 
+## Cómo desarrollar un plugin
 
+Un plugin necesita exportar 2 funciones fundamentales:
+
+* `config()`: Función que expota un objecto con la configuración por defecto del plugin.
+* `deploy(oppciones)`: Función que realiza el deploy usando la configuración que se le pasa por argumentos. Devuelve una promesa que se resuelve cuando todo está desplegado.
 
 ## Enlace al paquete en npm
  * [Paquete publicado en npm](https://www.npmjs.com/package/gitbook-start-rafadanipedro)
