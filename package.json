@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro.git"
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-rafadanipedro.git"
   },
   "keywords": [
     "paquete",
@@ -33,9 +33,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro/issues"
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-rafadanipedro/issues"
   },
-  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro#readme",
+  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-rafadanipedro#readme",
   "standard": {
     "parser": "babel-eslint"
   },
