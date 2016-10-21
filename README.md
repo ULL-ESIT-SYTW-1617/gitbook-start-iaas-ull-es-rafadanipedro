@@ -60,6 +60,12 @@ Un plugin necesita exportar 2 funciones fundamentales:
 ## Descripción de la práctica
  * [Gitbook de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html)
 
+## Comandos para trabajar con el comando al descargar el repositorio
+`babel-node <ruta del proyecto en el que trabaja> Pruebecia`
+`babel-node <ruta del proyecto en el que trabaja> plugin-iaas-rafadanipedro --author=prueba --host=xxx.xxxx.xxxx.xxx`
+`gulp -T`
+`gulp iaasRafadanipedro`
+
 ## Páginas personales
  
 Pinchando sobre las imágenes podrás acceder a nuestras páginas personales.
